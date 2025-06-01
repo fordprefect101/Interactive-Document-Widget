@@ -27,7 +27,12 @@ export default defineConfig({
     }
   },
   optimizeDeps: {
-    include: ['lit', '@lit/context', 'three', '@google/genai']
+    include: ['lit', '@lit/context', 'three', '@google/genai'],
+    esbuildOptions: {
+      define: {
+        'process.env.NODE_ENV': '"production"'
+      }
+    }
   },
   server: {
     port: 4173,

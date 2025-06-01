@@ -1,3 +1,6 @@
+// Set Lit to production mode
+window.lit = { devMode: false };
+
 // Interactive Document Widget
 // This file bundles the entire Interactive Document application into a pluggable widget
 
@@ -16,9 +19,6 @@ import { customElement, property } from './node_modules/lit/decorators.js';
 import { GoogleGenAI } from './node_modules/@google/genai/dist/index.js';
 import * as THREE from './node_modules/three/build/three.module.js';
 import { GdmLiveAudio } from './index.tsx';
-
-// Set Lit to production mode
-window.lit = { devMode: false };
 
 // Default widget styles
 const WIDGET_STYLES = `

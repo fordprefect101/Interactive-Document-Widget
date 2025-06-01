@@ -33456,9 +33456,9 @@ Un([
 fn = Un([
   Vc("gdm-live-audio")
 ], fn);
+window.lit = { devMode: !1 };
 const Lf = window.CONFIG?.apiKey, SC = window.CONFIG?.model || "gemini-2.5-flash-preview-native-audio-dialog";
 Lf || console.error("API key not provided in CONFIG object");
-window.lit = { devMode: !1 };
 const MC = `
   .interactive-document-widget {
     width: 100%;
