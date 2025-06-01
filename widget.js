@@ -4,6 +4,9 @@ window.lit = { devMode: false };
 // Interactive Document Widget
 // This file bundles the entire Interactive Document application into a pluggable widget
 
+// Import the main application
+import { GdmLiveAudio } from './src/index.js';
+
 // Get configuration from global CONFIG object
 const GLOBAL_API_KEY = window.CONFIG?.apiKey;
 const MODEL_NAME = window.CONFIG?.model || 'gemini-2.5-flash-preview-native-audio-dialog';
@@ -18,7 +21,6 @@ import { LitElement, css, html } from './node_modules/lit/index.js';
 import { customElement, property } from './node_modules/lit/decorators.js';
 import { GoogleGenAI } from './node_modules/@google/genai/dist/index.js';
 import * as THREE from './node_modules/three/build/three.module.js';
-import { GdmLiveAudio } from './index.tsx';
 
 // Default widget styles
 const WIDGET_STYLES = `

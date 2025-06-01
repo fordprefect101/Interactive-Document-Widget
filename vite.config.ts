@@ -3,27 +3,26 @@ import { resolve } from 'path';
 
 export default defineConfig({
   build: {
-    lib: {
-      entry: resolve(__dirname, 'widget.js'),
-      name: 'InteractiveDocumentWidget',
-      fileName: 'widget',
-      formats: ['es']
-    },
-    rollupOptions: {
-      output: {
-        format: 'es',
-        entryFileNames: 'widget.js',
-        chunkFileNames: '[name].js',
-        assetFileNames: '[name][extname]'
-      }
-    },
+    outDir: 'dist',
+    assetsDir: 'assets',
     sourcemap: true,
     minify: true,
-    target: 'es2020'
+    target: 'es2020',
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        widget: resolve(__dirname, 'widget.js')
+      },
+      output: {
+        entryFileNames: 'assets/[name].[hash].js',
+        chunkFileNames: 'assets/[name].[hash].js',
+        assetFileNames: 'assets/[name].[hash].[ext]'
+      }
+    }
   },
   resolve: {
     alias: {
-      '@': resolve(__dirname, './')
+      '@': resolve(__dirname, './src')
     }
   },
   optimizeDeps: {
