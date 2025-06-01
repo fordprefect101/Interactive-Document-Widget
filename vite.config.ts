@@ -27,7 +27,7 @@ export default defineConfig({
     }
   },
   optimizeDeps: {
-    include: ['lit', '@lit/context', 'three']
+    include: ['lit', '@lit/context', 'three', '@google/genai']
   },
   server: {
     port: 4173,

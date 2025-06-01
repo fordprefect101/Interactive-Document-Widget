@@ -11,10 +11,10 @@ if (!GLOBAL_API_KEY) {
 }
 
 // Import dependencies
-import { LitElement, css, html } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
-import { GoogleGenAI } from '@google/genai';
-import * as THREE from 'three';
+import { LitElement, css, html } from './node_modules/lit/index.js';
+import { customElement, property } from './node_modules/lit/decorators.js';
+import { GoogleGenAI } from './node_modules/@google/genai/dist/index.js';
+import * as THREE from './node_modules/three/build/three.module.js';
 import { GdmLiveAudio } from './index.tsx';
 
 // Set Lit to production mode
