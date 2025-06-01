@@ -10,28 +10,11 @@ if (!GLOBAL_API_KEY) {
     console.error('API key not provided in CONFIG object');
 }
 
-// Import map for dependencies
-const importMap = {
-  imports: {
-    "lit": "https://esm.sh/lit@^3.3.0",
-    "lit/": "https://esm.sh/lit@^3.3.0/",
-    "@lit/context": "https://esm.sh/@lit/context@^1.1.5",
-    "three": "https://esm.sh/three@^0.176.0",
-    "three/": "https://esm.sh/three@^0.176.0/"
-  }
-};
-
-// Add import map to document
-const importMapScript = document.createElement('script');
-importMapScript.type = 'importmap';
-importMapScript.textContent = JSON.stringify(importMap);
-document.head.appendChild(importMapScript);
-
 // Import dependencies
-import { LitElement, css, html } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { LitElement, css, html } from 'https://esm.sh/lit@^3.3.0';
+import { customElement, property } from 'https://esm.sh/lit@^3.3.0/decorators.js';
 import { GoogleGenAI } from 'https://esm.sh/@google/genai@0.9.0';
-import * as THREE from 'three';
+import * as THREE from 'https://esm.sh/three@^0.176.0';
 import { GdmLiveAudio } from './index.tsx';
 
 // Set Lit to production mode

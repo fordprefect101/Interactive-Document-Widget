@@ -10,24 +10,13 @@ export default defineConfig({
       formats: ['es']
     },
     rollupOptions: {
-      external: [
-        'lit',
-        'lit/',
-        '@lit/context',
-        '@google/genai',
-        'three',
-        'three/'
-      ],
+      external: ['lit', '@lit/context', 'three'],
       output: {
         globals: {
           'lit': 'Lit',
-          'lit/': 'Lit',
           '@lit/context': 'LitContext',
-          '@google/genai': 'GoogleGenAI',
-          'three': 'THREE',
-          'three/': 'THREE'
-        },
-        dir: 'dist'
+          'three': 'THREE'
+        }
       }
     },
     sourcemap: true,
@@ -36,7 +25,10 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': resolve(__dirname, './')
+      '@': resolve(__dirname, './'),
+      'lit': 'https://esm.sh/lit@^3.3.0',
+      '@lit/context': 'https://esm.sh/@lit/context@^1.1.5',
+      'three': 'https://esm.sh/three@^0.176.0'
     }
   },
   server: {
