@@ -11,10 +11,10 @@ if (!GLOBAL_API_KEY) {
 }
 
 // Import dependencies
-import { LitElement, css, html } from 'https://esm.sh/lit@^3.3.0';
-import { customElement, property } from 'https://esm.sh/lit@^3.3.0/decorators.js';
-import { GoogleGenAI } from 'https://esm.sh/@google/genai@0.9.0';
-import * as THREE from 'https://esm.sh/three@^0.176.0';
+import { LitElement, css, html } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
+import { GoogleGenAI } from '@google/genai';
+import * as THREE from 'three';
 import { GdmLiveAudio } from './index.tsx';
 
 // Set Lit to production mode

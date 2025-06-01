@@ -10,13 +10,11 @@ export default defineConfig({
       formats: ['es']
     },
     rollupOptions: {
-      external: ['lit', '@lit/context', 'three'],
       output: {
-        globals: {
-          'lit': 'Lit',
-          '@lit/context': 'LitContext',
-          'three': 'THREE'
-        }
+        format: 'es',
+        entryFileNames: 'widget.js',
+        chunkFileNames: '[name].js',
+        assetFileNames: '[name][extname]'
       }
     },
     sourcemap: true,
@@ -25,11 +23,11 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': resolve(__dirname, './'),
-      'lit': 'https://esm.sh/lit@^3.3.0',
-      '@lit/context': 'https://esm.sh/@lit/context@^1.1.5',
-      'three': 'https://esm.sh/three@^0.176.0'
+      '@': resolve(__dirname, './')
     }
+  },
+  optimizeDeps: {
+    include: ['lit', '@lit/context', 'three']
   },
   server: {
     port: 4173,
