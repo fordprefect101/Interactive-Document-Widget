@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Document Widget Example</title>
+</head>
+<body>
+    <button onclick="openInteractiveDocumentWidget()">Open Interactive Document Widget</button>
+    <!-- Configuration script -->
+    <script>
+        window.CONFIG = {
+            apiKey: 'AIzaSyACyH4ULyqRIZTIQNY0BkQSN6wpmqBYlqg',
+            model: 'gemini-2.5-flash-preview-native-audio-dialog'
+        };
+    </script>
+    <!-- Widget script -->
+    <script type="module" src="widget-loader.js"></script>
+</body>
+</html>
