@@ -5,7 +5,7 @@ window.lit = { devMode: false };
 // This file bundles the entire Interactive Document application into a pluggable widget
 
 // Import the main application
-import { GdmLiveAudio } from './src/index.js';
+import { GdmLiveAudio } from './src/index.ts';
 
 // Get configuration from global CONFIG object
 const GLOBAL_API_KEY = window.CONFIG?.apiKey;
