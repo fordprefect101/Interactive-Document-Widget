@@ -17,10 +17,10 @@ if (!GLOBAL_API_KEY) {
 }
 
 // Import dependencies
-import { LitElement, css, html } from './node_modules/lit/index.js';
-import { customElement, property } from './node_modules/lit/decorators.js';
-import { GoogleGenAI } from './node_modules/@google/genai/dist/index.js';
-import * as THREE from './node_modules/three/build/three.module.js';
+import { LitElement, css, html } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
+import { GoogleGenAI } from '@google/genai';
+import * as THREE from 'three';
 
 // Default widget styles
 const WIDGET_STYLES = `
