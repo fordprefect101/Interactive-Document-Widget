@@ -6,10 +6,6 @@
     <title>Interactive Document Widget</title>
     <meta name="description" content="Interactive Document Widget powered by Google AI">
     
-    <!-- Preload critical assets -->
-    <link rel="preload" href="./assets/main.[hash].js" as="script">
-    <link rel="preload" href="./assets/widget.[hash].js" as="script">
-    
     <!-- Configuration -->
     <script>
         window.CONFIG = {
@@ -22,9 +18,9 @@
     <div id="app"></div>
     
     <!-- Main application bundle -->
-    <script type="module" src="./assets/main.[hash].js"></script>
+    <script type="module" src="/src/index.ts"></script>
     
     <!-- Widget loader -->
-    <script type="module" src="./assets/widget.[hash].js"></script>
+    <script type="module" src="/widget.js"></script>
 </body>
 </html>

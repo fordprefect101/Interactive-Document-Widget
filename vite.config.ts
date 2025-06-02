@@ -11,7 +11,7 @@ export default defineConfig({
     target: 'es2020',
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'index.html'),
+        main: resolve(__dirname, 'src/index.ts'),
         widget: resolve(__dirname, 'widget.js')
       },
       output: {
